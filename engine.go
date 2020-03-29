@@ -1,4 +1,4 @@
-package main
+package gordon
 
 import (
 	"encoding/json"
