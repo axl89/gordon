@@ -1,4 +1,4 @@
-package gordon
+package main
 
 import (
 	"log"
