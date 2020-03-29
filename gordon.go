@@ -16,7 +16,7 @@ func getEngine(url string) *Engine {
 
 func main() {
 
-	var engine = getEngine("https://hackalog.scalefast.ninja/50.json")
+	var engine = getEngine("https://pingass.scalefast.ninja/api/sites")
 
 	var data = engine.GetJSON()
 
@@ -29,7 +29,6 @@ func main() {
 		os.Exit(1)
 	}
 
-	//result, err := client.Invoke(&lambda.InvokeInput{FunctionName: aws.String("Pinguer"), Payload: payload})
 	clientEU.Invoke(&lambda.InvokeInput{InvocationType: aws.String("Event"), FunctionName: aws.String("Pinguer"), Payload: payload})
 	clientUS.Invoke(&lambda.InvokeInput{InvocationType: aws.String("Event"), FunctionName: aws.String("Pinguer"), Payload: payload})
 
