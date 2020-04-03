@@ -29,8 +29,8 @@ func main() {
 		os.Exit(1)
 	}
 
-	clientEU.Invoke(&lambda.InvokeInput{InvocationType: aws.String("Event"), FunctionName: aws.String("Pinguer"), Payload: payload})
-	clientUS.Invoke(&lambda.InvokeInput{InvocationType: aws.String("Event"), FunctionName: aws.String("Pinguer"), Payload: payload})
+	clientEU.Invoke(&lambda.InvokeInput{InvocationType: aws.String("Event"), FunctionName: aws.String("ping-as-a-service-aws-lambda-production-main"), Payload: payload})
+	clientUS.Invoke(&lambda.InvokeInput{InvocationType: aws.String("Event"), FunctionName: aws.String("ping-as-a-service-aws-lambda-production-main"), Payload: payload})
 
 	fmt.Println("Done")
 
